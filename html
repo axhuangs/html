@@ -1,0 +1,41 @@
+# html
+html面试题
+
+**HTML的行内元素和块级元素有哪些？**
+- 块级元素 ： div p h1-h6 ul form 等
+- 行内元素 ： a b i em span input select
+
+**img的alt与title有何异同？**
+alt ： 当图片不能正常显示时，用alt中的内容，提示图片代表的内容,但是alt属性字符长度必须少于100个英文字符
+title : 可以为图片添加提示信息，当鼠标移动到图片上时显示，比alt字符更长，
+>当然title还可以用在除了meta,html,head,title,script,base,basefont,param之外的所有标签上。
+
+**src和href的区别**
+src是source的缩写，指向外部文件的位置，指向的内容将会嵌入到文档当前标签所在位置，src请求资源时，会将指向的资源下载并应用到当前文档内，
+比如：js,img,frame
+当浏览器解析到该元素时，会暂停其他元素的下载和处理，知道将该资源加载，编译执行完毕，所以在引入js时，建议放到文档底部
+
+href是Hypertext Reference的缩写,指向资源所在位置，建立和当前元素(锚点)或者当前文档之间的链接，并且浏览器执行到这里时，比如css文件，会并行下载并不会停止当前文档的处理
+
+**strong和em的区别**
+strong : 粗体强调标签，表示重要的内容。
+em :  斜体强调标签，更强烈的强调
+
+**为什么利用多个域名来存储网站资源会更有效**
+- CDN缓存更方便，用户浏览更快速，
+- 缓解当前网站服务器的负载，
+- 突破浏览器的并发数限制
+- 节约cookie带宽
+- 防止不必要的安全问题
+
+**cookie,sessionStorage和localStorage的区别**
+- cookie在浏览器与服务器之间来回传递，即使用不到它，而其他两个则只在本地保存
+- sessionStorage和localStorage的存储空间更大可以达到5M以上，而cookie的数据一般在4k左右
+  >并且不同浏览器在相同域名下保存的cookie条数也是有限制的，最小的20条，最大的50条
+- sessionStorage和localStorage有更多的丰富接口，以及独立的存储空间
+- sessionStorage时会话存储，当前浏览器窗口关闭后，自动删除数据
+- localStorage是本地存储，并且永久保存，关闭窗口后数据不会删除，除非出动删除
+- cookie 在设置的过期时间之前一直保存，即使窗口关闭或者浏览器关闭
+- cookie以及localStorage存储的数据，在同域名同浏览器下，可以在多个标签窗口通信共享，而sessionStorage则不能
+
+
